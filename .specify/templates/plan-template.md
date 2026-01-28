@@ -31,7 +31,15 @@
 
 *GATE: Must pass before Phase 0 research. Re-check after Phase 1 design.*
 
-[Gates determined based on constitution file]
+Per the ContosoDashboard Constitution (v1.0.0), verify compliance with:
+
+- [ ] **I. Spec-Driven Development**: Is there a current `spec.md` with prioritized user stories and acceptance scenarios?
+- [ ] **II. Service-Layer Security**: Does the feature include service-level authorization checks (not just page-level `[Authorize]`)?
+- [ ] **III. Test-First Architecture**: Are contract, integration, and unit tests designed before implementation?
+- [ ] **IV. Interface Abstraction**: Do all infrastructure dependencies (database, storage, auth) use C# interfaces?
+- [ ] **V. Clean Separation of Concerns**: Are Models, Services, Data, and Pages layers clearly separated?
+
+**Non-Compliance**: If any gate fails, document justification under "Complexity Tracking" below.
 
 ## Project Structure
 

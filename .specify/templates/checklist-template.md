@@ -15,22 +15,33 @@
   - Feature requirements from spec.md
   - Technical context from plan.md
   - Implementation details from tasks.md
+  - Constitution Principle compliance (per .specify/memory/constitution.md)
+  
+  Suggested checklist categories:
+  1. Spec-Driven Development (Principle I): Spec exists, user stories prioritized, scenarios defined
+  2. Security Compliance (Principle II): Service-layer auth checks, IDOR prevention, authorization model documented
+  3. Test Coverage (Principle III): Contract tests, integration tests, unit tests all present and passing
+  4. Interface Abstraction (Principle IV): Infrastructure dependencies use C# interfaces
+  5. Code Organization (Principle V): Models, Services, Data, Pages layers clearly separated
   
   DO NOT keep these sample items in the generated checklist file.
   ============================================================================
 -->
 
-## [Category 1]
+## Constitution Compliance *(for all features)*
 
-- [ ] CHK001 First checklist item with clear action
-- [ ] CHK002 Second checklist item
-- [ ] CHK003 Third checklist item
+- [ ] CHK001 All five Constitution principles reviewed against feature requirements
+- [ ] CHK002 Spec-Driven: spec.md exists with prioritized user stories and acceptance scenarios
+- [ ] CHK003 Service-Layer Security: All service methods document authorization requirements
+- [ ] CHK004 Test-First: Contract, integration, and unit tests designed and failing before implementation
+- [ ] CHK005 Interface Abstraction: All infrastructure dependencies use C# interfaces (no direct implementations)
+- [ ] CHK006 Separation of Concerns: Models, Services, Data, Pages layers clearly separated
 
 ## [Category 2]
 
-- [ ] CHK004 Another category item
-- [ ] CHK005 Item with specific criteria
-- [ ] CHK006 Final item in this category
+- [ ] CHK007 Another category item
+- [ ] CHK008 Item with specific criteria
+- [ ] CHK009 Final item in this category
 
 ## Notes
 
@@ -38,3 +49,4 @@
 - Add comments or findings inline
 - Link to relevant resources or documentation
 - Items are numbered sequentially for easy reference
+- Constitution Compliance (CHK001-CHK006) is required for all features

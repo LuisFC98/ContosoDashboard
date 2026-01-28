@@ -95,6 +95,18 @@
 - **FR-006**: System MUST authenticate users via [NEEDS CLARIFICATION: auth method not specified - email/password, SSO, OAuth?]
 - **FR-007**: System MUST retain user data for [NEEDS CLARIFICATION: retention period not specified]
 
+### Security Requirements *(per Constitution Principle II)*
+
+Per the ContosoDashboard Constitution, all features handling user data must include explicit security requirements:
+
+- **SR-001**: Service methods MUST verify user authorization before returning or modifying user-specific data
+- **SR-002**: Feature MUST prevent IDOR (Insecure Direct Object Reference) by validating resource ownership
+- **SR-003**: Feature MUST document the authorization model (who can access what and when)
+- **SR-004**: Feature MUST identify which service methods require authorization checks
+
+Example:
+- **SR-005**: `ProjectService.GetProjectAsync(int projectId)` MUST verify caller is a project member before returning project data
+
 ### Key Entities *(include if feature involves data)*
 
 - **[Entity 1]**: [What it represents, key attributes without implementation]
